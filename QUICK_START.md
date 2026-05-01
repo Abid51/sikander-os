@@ -1,3 +1,3 @@
-# QUICK_START
+# This file has been consolidated into QUICKSTART.md
 
-Quickstart doc 2
+Please use QUICKSTART.md instead. This file is deprecated.
