@@ -5,6 +5,23 @@
 
 ---
 
+## 📖 Documentation Quick Links
+
+| Document | Purpose |
+|----------|---------|
+| **[QUICKSTART.md](QUICKSTART.md)** | ⚡ **Start here** — 5-minute setup |
+| **[DEVELOPMENT.md](DEVELOPMENT.md)** | 🛠️ Development environment setup |
+| **[CONTRIBUTING.md](CONTRIBUTING.md)** | 🤝 How to contribute |
+| **[SECURITY.md](SECURITY.md)** | 🔒 Security hardening & configuration |
+| **[CLOUD_AI_SETUP.md](CLOUD_AI_SETUP.md)** | ☁️ Deployment to cloud |
+| **[FIX_SUMMARY.md](FIX_SUMMARY.md)** | 📋 Recent fixes & improvements |
+
+**New to the project?** → Start with [QUICKSTART.md](QUICKSTART.md)  
+**Setting up for development?** → Go to [DEVELOPMENT.md](DEVELOPMENT.md)  
+**Production deployment?** → See [SECURITY.md](SECURITY.md) + [CLOUD_AI_SETUP.md](CLOUD_AI_SETUP.md)
+
+---
+
 ## Table of Contents
 
 1. [Requirements](#requirements)
@@ -32,7 +49,7 @@
 **Recommended Python packages (install once):**
 ```bash
 pip install bcrypt pyotp cryptography   # security hardening
-pip install psutil psutil               # system metrics
+pip install psutil                      # system metrics
 pip install fastapi uvicorn httpx       # core API
 ```
 
@@ -92,10 +109,10 @@ npm run dev:frontend   # terminal 2
 ```
 sikander-os/
 ├── backend/
-│   ├── main.py                  # FastAPI app entry point
+│   ├── main.py                  # FastAPI app entry point ✅
 │   ├── conftest.py              # pytest shared fixtures
 │   ├── pytest.ini               # test configuration
-│   ├── requirements.txt         # Python dependencies
+│   ├── requirements.txt         # Python dependencies ✅ (aligned)
 │   ├── .env / .env.example      # environment variables
 │   ├── app/
 │   │   ├── core/                # 69 core modules
@@ -121,8 +138,13 @@ sikander-os/
 │   └── plugins/                 # Drop .py plugins here
 ├── frontend/                    # Vite + React dashboard
 ├── scripts/                     # start-local.* helpers
+├── .github/workflows/           # ✅ CI/CD pipelines (NEW)
 ├── docker-compose.yml
-└── README.md
+├── README.md
+├── QUICKSTART.md                # ✅ (Updated)
+├── DEVELOPMENT.md               # ✅ (New)
+├── CONTRIBUTING.md              # ✅ (New)
+└── FIX_SUMMARY.md               # ✅ (New)
 ```
 
 ---
@@ -155,7 +177,6 @@ valid, payload = security_manager.verify_jwt_token(access)
 
 # Rotate refresh token (old one invalidated)
 ok, result = security_manager.use_refresh_token(refresh)
-# result contains new access_token + refresh_token
 
 # Logout-all
 security_manager.revoke_all_refresh_tokens(user_id=1)
@@ -237,9 +258,6 @@ curl -X POST http://localhost:8000/api/admin/auth/login \
 | POST | `/lockdown` | Engage neural lockdown (level 1–4) |
 | GET  | `/lockdown/status` | Lockdown state |
 | POST | `/lockdown/disengage` | Lift lockdown |
-| POST | `/shadow/authorize` | Authorize pentest target |
-| POST | `/shadow/recon` | Full recon pipeline |
-| GET  | `/shadow/reports` | Recon history |
 
 ---
 
@@ -253,19 +271,6 @@ curl -X POST http://localhost:8000/api/admin/auth/login \
 
 ---
 
-### Cybersecurity (`/api/advanced/cybersecurity/`)
-
-| Method | Path | Description |
-|---|---|---|
-| POST | `/scan-ports` | TCP port scan |
-| POST | `/vulnerability-assessment` | CVE check |
-| POST | `/security-audit` | Full audit report |
-| POST | `/network-analysis` | Traffic analysis |
-| POST | `/password-strength` | Entropy scoring |
-| POST | `/ssl-check` | Certificate analysis |
-
----
-
 ### Core Endpoints
 
 | Method | Path | Description |
@@ -275,9 +280,6 @@ curl -X POST http://localhost:8000/api/admin/auth/login \
 | POST | `/chat/stream` | SSE streaming response |
 | GET  | `/observability/snapshot` | Metrics + queue depth |
 | GET  | `/docs` | OpenAPI UI |
-| GET  | `/api/admin/monitor/health` | Admin health |
-| GET  | `/api/admin/monitor/metrics` | Admin metrics |
-| GET  | `/api/admin/audit/logs` | Audit log |
 
 ---
 
@@ -479,9 +481,39 @@ docker compose up
 | Plugin not loading | Ensure plugin class inherits `IgrisPlugin`; check `plugins/` dir path |
 | Database locked | Only one process should write; ensure no zombie processes |
 | Rate limit exceeded (429) | Increase `rate_limit_per_minute` in `SecurityManager` init |
+| **Backend won't start** | See [DEVELOPMENT.md](DEVELOPMENT.md#common-issues--fixes) |
+| **Port 8000 in use** | Change port in `backend/main.py` uvicorn.run() |
+
+---
+
+## Recent Improvements ✨
+
+See [FIX_SUMMARY.md](FIX_SUMMARY.md) for recent fixes and enhancements:
+- ✅ Dependency version alignment
+- ✅ CI/CD pipeline setup
+- ✅ Documentation consolidation
+- ✅ Threading improvements
+- ✅ Contributing guidelines
 
 ---
 
 ## License
 
 Released under the [MIT License](LICENSE). Change the copyright line to your name.
+
+---
+
+## Getting Help
+
+1. **Quick start issues?** → [QUICKSTART.md](QUICKSTART.md)
+2. **Development setup?** → [DEVELOPMENT.md](DEVELOPMENT.md)
+3. **Want to contribute?** → [CONTRIBUTING.md](CONTRIBUTING.md)
+4. **Security concerns?** → [SECURITY.md](SECURITY.md)
+5. **Deployment?** → [CLOUD_AI_SETUP.md](CLOUD_AI_SETUP.md)
+6. **Recent changes?** → [FIX_SUMMARY.md](FIX_SUMMARY.md)
+
+**Need more help?** Open an issue on GitHub or contact maintainers.
+
+---
+
+**Happy coding!** 🚀⚔️
