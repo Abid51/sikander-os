@@ -47,4 +47,5 @@ backend/igris_chroma_db/
 igris_chroma_db/
 igris_memory.json
 quantum_thinking_history.json
-llm_config.json
+backend/scheduler_jobs.json
+backend/plugins/.marketplace_cache.json
