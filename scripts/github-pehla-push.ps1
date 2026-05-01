@@ -3,6 +3,12 @@
 
 $ErrorActionPreference = "Stop"
 
+# Windows pe `gh` andar `git` chalata hai — PATH pe Git\bin hona zaroori warna gh repo nahin samajhta.
+$GitBin = Join-Path ${env:ProgramFiles} "Git\bin"
+if (Test-Path $GitBin) {
+    $env:Path = "$GitBin;$env:Path"
+}
+
 $Gh = Join-Path ${env:ProgramFiles} "GitHub CLI\gh.exe"
 if (-not (Test-Path $Gh)) {
     Write-Host "GitHub CLI nahi mila. Install karo:" -ForegroundColor Red
