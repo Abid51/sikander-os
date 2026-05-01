@@ -1,0 +1,10 @@
+/* Minimal baseline — most styles live in app.css */
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #0b0b0d;
+  color: #e6e6ea;
+}

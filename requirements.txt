@@ -1,0 +1,59 @@
+# ── SIKANDER OS — IGRIS — Complete Requirements ────────────
+
+# ── Desktop Application ─────────────────────────────────────
+pywebview>=5.0
+pyinstaller>=6.0
+
+# ── Web Framework (Backend) ─────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+starlette>=0.37.0
+
+# ── AI / ML ─────────────────────────────────────────────────
+openai>=1.30.0
+anthropic>=0.28.0
+google-generativeai>=0.5.0
+transformers>=4.40.0
+
+# ── Security ─────────────────────────────────────────────────
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.1.0
+cryptography>=42.0.0
+pyotp>=2.9.0
+
+# ── System ───────────────────────────────────────────────────
+psutil>=5.9.0
+python-dotenv>=1.0.0
+pydantic>=2.7.0
+
+# ── HID / Hotkey ─────────────────────────────────────────────
+keyboard>=0.13.5
+
+# ── Mouse / Keyboard Control (Ghost Protocol - Dominion Daemon) ──
+pyautogui>=0.9.54
+
+# ── Utils ────────────────────────────────────────────────────
+httpx>=0.27.0,<0.28.0
+aiofiles>=23.0.0
+rich>=13.7.0
+
+# ── Image ────────────────────────────────────────────────────
+Pillow>=10.3.0
+
+# ── Vector Memory (Soul Weaver Daemon + Neural Memory) ───────
+chromadb>=0.5.0
+
+# ── Finance / Crypto (Crimson Ledger Daemon) ─────────────────
+ccxt>=4.3.0
+
+# ── Speech Recognition (Whisper Wind Daemon) ─────────────────
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.14
+
+# ── WebSocket Client (for distributed tests) ─────────────────
+websockets>=12.0
+
+# ── Testing ──────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx[http2]>=0.27.0,<0.28.0

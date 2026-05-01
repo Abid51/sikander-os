@@ -1,0 +1,19 @@
+[
+  {
+    "name": "lambda_p",
+    "version": "1.0.0",
+    "description": "Test plugin lambda_p",
+    "author": "test",
+    "file_path": "C:\\Users\\AABI\\AppData\\Local\\Temp\\pytest-of-AABI\\pytest-40\\test_marketplace_search_empty_0\\lambda_p.py",
+    "enabled": true,
+    "loaded_at": 1777604860.223218,
+    "error": "",
+    "commands": [
+      "lambda_p_cmd"
+    ],
+    "hooks": [],
+    "requires": [],
+    "tags": [],
+    "last_modified": 1777604860.2102625
+  }
+]

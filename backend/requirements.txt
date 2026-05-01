@@ -1,0 +1,82 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pynput>=1.7.6
+pydantic==2.5.0
+python-dotenv==1.0.0
+python-multipart>=0.0.9
+websockets==12.0
+aiohttp>=3.10.0
+requests>=2.32.0
+pyautogui==0.9.53
+pytesseract==0.3.10
+Pillow==10.1.0
+pyttsx3==2.90
+SpeechRecognition==3.10.1
+PyGetWindow==0.0.9
+ccxt==4.0.48
+feedparser==6.0.10
+schedule==1.2.0
+beautifulsoup4==4.12.2
+pyinstaller==6.1.0
+WMI==1.5.1
+opencv-python==4.8.1.78
+numpy>=1.24.3
+cryptography>=42.0.0
+bcrypt>=4.0.0
+PyJWT>=2.8.0
+chromadb>=0.5.0
+pyotp>=2.9.0
+scipy==1.11.4
+scikit-learn==1.3.2
+mediapipe==0.10.5
+
+# ── Phase 4: Neural Memory (Vector DB) ──────────────────────────────────────
+# numpy already listed above — provides fast cosine similarity
+# No external vector DB needed (pure python fallback included)
+
+# ── Phase 5: God-Tier Supremacy Systems ──────────────────────────────────────
+networkx>=3.2.0
+psutil>=5.9.0
+mss>=9.0.1              # Fast screen capture for Live View Engine
+
+# ── LLM Integration ───────────────────────────────────────────────────────────
+litellm>=1.35.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+httpx>=0.26.0,<0.28.0
+
+# ── Phase 2: New Power Features ──────────────────────────────────────────────
+# Browser Automation (install browser after: playwright install chromium)
+playwright>=1.42.0
+
+# Advanced STT — Whisper (local, no API key)
+openai-whisper>=20231117
+
+# Audio I/O
+sounddevice>=0.4.6
+soundfile>=0.12.1
+# scipy pinned above
+
+# Email (built-in smtplib/imaplib used — no extra pkg needed)
+
+# Optional: ElevenLabs TTS (key required)
+# elevenlabs>=1.0.0
+
+# Cost tracker uses only stdlib — no extra deps
+
+# ── Phase 3: Advanced Features ───────────────────────────────────────────────
+# Document Parser
+PyPDF2>=3.0.0
+python-docx>=1.1.0
+pdfplumber>=0.10.0
+openpyxl>=3.1.0
+
+# Discord Bot
+discord.py>=2.3.0
+
+# WhatsApp (Twilio)
+twilio>=9.0.0
+
+# Image Analysis — uses existing API keys, no extra deps

@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv311/
+venv/
+backend/venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/node_modules/
+
+# Env & secrets
+.env
+.env.local
+*.pem
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Runtime / local DB, logs, embeddings, snapshots (do not commit)
+*.log
+*.tsbuildinfo
+
+backend/*.db
+backend/*.sqlite3
+backend/igris_*.json
+backend/akashic_records.json
+backend/config_igris.json
+backend/igris_qe_key.bin
+backend/**/*.backup*
+**/modifications.log
+
+backend/screenshot*.png
+backend/screenshots/
+backend/igris_snapshots/
+backend/igris_chroma_db/
+
+igris_chroma_db/
+igris_memory.json
+quantum_thinking_history.json
+llm_config.json
