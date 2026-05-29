@@ -14,7 +14,7 @@ if sys.platform == 'win32':
 class VerificationChecklist:
     def __init__(self):
         self.checks = []
-        self.root = Path("c:/Users/AABI/Downloads/sikander-os")
+        self.root = Path(".")
     
     def check_file_exists(self, filename, description):
         """Check if file exists"""
@@ -66,8 +66,8 @@ class VerificationChecklist:
         self.check_file_exists("backend/app/core/cloud_ai.py", "8. Cloud AI providers (NEW)")
         self.check_file_exists("backend/app/api/cloud_routes.py", "9. Cloud API endpoints (NEW)")
         self.check_file_contains("backend/requirements.txt", "aiohttp", "10. aiohttp in requirements")
-        self.check_file_contains("backend/main.py", "from app.api import cloud_routes", "11. Cloud routes imported in main.py")
-        self.check_file_contains("backend/main.py", "app.include_router(cloud_routes.router)", "12. Cloud routes registered in FastAPI")
+        self.check_file_contains("backend/app/api/router_setup.py", "cloud_routes", "11. Cloud routes imported in router_setup.py")
+        self.check_file_contains("backend/app/api/router_setup.py", "cloud_routes.router", "12. Cloud routes registered in router_setup.py")
         
         print("\n🎤 VOICE INTEGRATION:")
         print("-" * 70)

@@ -21,6 +21,7 @@ from app.api import (
     ws_hub,
     frontend_routes,
     quantum_routes,
+    cloud_routes,
 )
 
 
@@ -49,5 +50,6 @@ def register_all_routers(app: FastAPI) -> None:
         ws_hub.router,
         frontend_routes.router,
         quantum_routes.router,
+        cloud_routes.router,
     ):
         app.include_router(router)
