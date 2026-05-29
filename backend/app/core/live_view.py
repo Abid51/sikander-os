@@ -42,7 +42,7 @@ except ImportError:
 try:
     import pygetwindow as gw
     _GW_AVAILABLE = True
-except ImportError:
+except (ImportError, NotImplementedError):
     _GW_AVAILABLE = False
 
 

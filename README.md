@@ -149,6 +149,18 @@ sikander-os/
 
 ---
 
+## CLOUD AI INTEGRATION
+
+Sikander-OS supports various Cloud AI providers for enhanced intelligence and voice responses.
+Configurable via `backend/.env`:
+- **Groq**: High-speed inference
+- **HuggingFace**: Open-source models
+- **Replicate**: Versatile AI models
+
+See `CLOUD_AI_SETUP.md` for detailed configuration.
+
+---
+
 ## Security Layer
 
 Sikander-OS implements **production-grade security** across 6 modules:

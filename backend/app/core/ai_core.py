@@ -27,7 +27,7 @@ from bs4 import BeautifulSoup
 
 try:
     import pygetwindow as gw
-except ImportError:
+except (ImportError, NotImplementedError):
     gw = None
 
 from dotenv import load_dotenv
